@@ -2,3 +2,12 @@ body{
 	background-image: url(../img/index_bg.jpg);
 	background-size: cover;
 }
+.btn-primary.green{
+	 background-color: #63C9A7 !important;
+  border-color: #63C9A7;
+}
+
+.btn-primary.green:hover,.btn-primary.green:active,
+ .btn-primary.green:focus{
+	 background-color: #63C9A7 !important;
+}
