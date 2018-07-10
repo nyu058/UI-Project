@@ -21,7 +21,7 @@ public class Connect {
 
 			Class.forName("org.postgresql.Driver");
 
-			connection = DriverManager.getConnection("jdbc:postgresql://35.207.49.242:5432/postgres", "postgres",
+			connection = DriverManager.getConnection("jdbc:postgresql://35.207.49.242:5432/project3125", "postgres",
 					"3125DBAccess");
 			System.out.println("Connection Established");
 		} catch (Exception e) {

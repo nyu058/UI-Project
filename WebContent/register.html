@@ -42,24 +42,27 @@
 			
 				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 				<h2>Sign Up</h2>
-				<form>
+				<form action="Register" method="post">
 				<div class="form-group">
-				<p style="display: inline"><b>Full Name</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
-				<input type="text" class="form-control" id="name" required> </div>
+				<p style="display: inline"><b>First Name</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
+				<input type="text" class="form-control" name="fname" required> </div>
+				<div class="form-group">
+				<p style="display: inline"><b>Last Name</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
+				<input type="text" class="form-control" name="lname" required> </div>
 				<div class="form-group">
 				<p style="display: inline"><b>Phone Number</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
-				<input type="tel" class="form-control" id="phone" required> </div>
+				<input type="tel" class="form-control" name="phone" required> </div>
 				<div class="form-group">
 				<p style="display: inline"><b>Email</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
-				<input type="email" class="form-control" id="email" required> </div>
+				<input type="email" class="form-control" name="email" required> </div>
 				<div class="form-group">
 				<p style="display: inline"><b>Password</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
-				<input type="password" class="form-control" id="pswd" required> </div>
+				<input type="password" class="form-control" name="pswd" required> </div>
 				<div class="form-group">
 				<p style="display: inline"><b>Confirm Password</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
-				<input type="password" class="form-control" id="cfmpswd" required> </div>
+				<input type="password" class="form-control" name="cfmpswd" required> </div>
 				<div class="form-controls">
-				 <button type="submit" class="btn btn-danger btn-lg full-width">SIGN UP</button>
+				 <input type="submit" class="btn btn-danger btn-lg full-width" value="SIGN UP">
 				</div>
 				</form>
 				</div>
