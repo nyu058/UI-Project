@@ -1,13 +1,40 @@
-body{
+body {
 	background-image: url(../img/index_bg.jpg);
 	background-size: cover;
 }
-.btn-primary.green{
-	 background-color: #63C9A7 !important;
-  border-color: #63C9A7;
+
+input[type="search"] {
+	-webkit-appearance: searchfield;
 }
 
-.btn-primary.green:hover,.btn-primary.green:active,
- .btn-primary.green:focus{
-	 background-color: #63C9A7 !important;
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: searchfield-cancel-button;
+}
+
+.btn-primary.green {
+	background-color: #63C9A7;
+	border-color: #63C9A7;
+	background-image: none;
+}
+
+.btn-primary.green:hover {
+	color: #63C9A7;
+	border-color: #63C9A7;
+	background-color: white;
+}
+
+.input-group-btn.input-space {
+	padding-left: 30px;
+}
+
+.btn-primary.orange {
+	background-color: #FF6600;
+	border-color: #FF6600;
+	background-image: none;
+}
+
+.btn-primary.orange:hover {
+	color: #FF6600;
+	border-color: #FF6600;
+	background-color: white;
 }
