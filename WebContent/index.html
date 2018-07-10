@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -33,43 +36,78 @@
 <title>Food Avenue</title>
 <link rel="stylesheet" href="CSS/Style.css">
 </head>
-<body>
+<body
+	style="background-image: url(img/index_bg.jpg); background-size: cover">
+
 	<div style="padding: 40px">
-		<span> <img src="img/logo.png" height="120">
+	
+		<span> <a href="index.html"><img src="img/logo.png"
+				height="100" width="200"></a>
+			<div class="dropdown pull-right" style="display: inline">
+				<button type="button"
+					class="btn btn-lg btn-primary orange dropdown-toggle"
+					id="loginDropdown" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false" style="float: right; margin-top: 50px">
+					<b>LOGIN&nbsp;<i class="glyphicon glyphicon-triangle-bottom"></i></b>
+				</button>
 
-			<button type="button" class="btn btn-lg btn-primary orange"
-				style="float: right">
-				<b>LOGIN</b>
-			</button>
-			<button type="button" class="btn btn-lg btn-primary green"
-				style="float: right; margin-right: 20px">
-				<b>REGISTER</b>
-			</button>
-		</span> <br> <br><br><br><br><br><br><br>
-		<div>
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-push-3 text-center"
-						style="background-color: rgba(255, 255, 255, 0.4); border-radius: 20px; border: 2px solid white; color: white">
-						<h1>A Better Way to Order Your Food</h1><br>
-						<form name="searchForm" action="search.html"
-							onsubmit="return checkEmpty()">
-
-							<div class="input-group">
-								<input id="search" type="search" class="form-control input-lg"
-									placeholder="Search your restaurant..." style="border-radius:8px"> <span
-									class="input-group-btn input-space">
-									<button type="submit" class="btn btn-lg btn-primary green"style="border-radius:8px">
-										<i class="glyphicon glyphicon-search"></i> Search
-									</button>
-								</span>
-							</div>
-						</form><br><br>
+				<form class="dropdown-menu form-wrapper ">
+					<div class="form-group">
+						<p>
+							<b>Email</b>
+						</p>
+						<input type="email" class="form-control" id="email" required>
 					</div>
+					<div class="form-group">
+						<p>
+							<b>Password</b>
+						</p>
+						<input type="password" class="form-control" id="pswd" required>
+					</div>
+					<button type="submit" class="btn btn-danger full-width">Login</button>
+				</form>
 
+
+
+			</div> <a href="register.html" type="button"
+			class="btn btn-lg btn-primary green"
+			style="float: right; margin-right: 20px; margin-top: 50px"> <b>REGISTER</b>
+		</a>
+		</span>
+		
+			<br> <br> <br> <br> <br> <br> <br>
+			<br> <br>
+			<div>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-sm-push-3 text-center"
+							style="background-color: rgba(255, 255, 255, 0.4); border-radius: 20px; border: 2px solid white; color: white">
+							<h1>A Better Way to Order Your Food</h1>
+							<br>
+							<form name="searchForm" action="search.html"
+								onsubmit="return checkEmpty()">
+
+								<div class="input-group">
+									<input id="search" type="search" class="form-control input-lg"
+										placeholder="Search your restaurant..."
+										style="border-radius: 8px"> <span
+										class="input-group-btn input-space">
+										<button type="submit" class="btn btn-lg btn-primary green"
+											style="border-radius: 8px">
+											<i class="glyphicon glyphicon-search"></i> Search
+										</button>
+									</span>
+								</div>
+							</form>
+							<br> <br>
+						</div>
+
+					</div>
 				</div>
-			</div>
+			
 		</div>
 	</div>
+	
+
 </body>
 </html>
