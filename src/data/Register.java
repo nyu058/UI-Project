@@ -29,23 +29,27 @@ public class Register extends HttpServlet {
 		Connect db = new Connect();
 		db.openConnection();
 
-		createUser(lname, fname, phone, email, pswd, db);
-
-		response.sendRedirect("RegisterSuccess.html");
+		if (createUser(lname, fname, phone, email, pswd, db)) {
+			response.sendRedirect("RegisterSuccess.html");
+		} else {
+			response.sendRedirect("RegisterFailed.html");
+		}
 	}
 
-	public void createUser(String lname, String fname, String phone, String email, String pswd, Connect conn) {
+	public boolean createUser(String lname, String fname, String phone, String email, String pswd, Connect conn) {
 		Statement st;
 		Connection connection = conn.getConnection();
 		try {
 			st = connection.createStatement();
-			st.executeUpdate("Insert into account values(" + getID(conn) + ", '" + fname + "', '" + lname + "', '"
+			st.executeUpdate("Insert into account values(" + getID(conn) + ", '" + lname + "', '" + fname + "', '"
 					+ phone + "', '" + email + "', '" + pswd + "', \'customer\')");
 
 		} catch (Exception e) {
 			System.out.println("Cant insert user info");
 			e.printStackTrace();
+			return false;
 		}
+		return true;
 	}
 
 	public int getID(Connect conn) {

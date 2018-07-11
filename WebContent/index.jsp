@@ -1,6 +1,11 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
+
 <script src="https://code.jquery.com/jquery-3.3.1.js"
 	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	crossorigin="anonymous"></script>
@@ -41,38 +46,38 @@
 
 	<div style="padding: 40px">
 	
-		<span> <a href="index.html"><img src="img/logo.png"
+		<span> <a href="index.jsp"><img src="img/logo.png"
 				height="100" width="200"></a>
+				
+
+				<c:choose>
+				<c:when test="${sessionScope.email==null}">
+				<c:import var ="notlogin" url="res/notLogin.html"/>
+			<c:out value="${notlogin}" escapeXml="false"/>
+			</c:when>
+			<c:otherwise>
+			<c:choose>
+			<c:when test="${sessionScope.type=='customer'}">
 			<div class="dropdown pull-right" style="display: inline">
-				<button type="button"
-					class="btn btn-lg btn-primary orange dropdown-toggle"
-					id="loginDropdown" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false" style="float: right; margin-top: 50px">
-					<b>LOGIN&nbsp;<i class="glyphicon glyphicon-triangle-bottom"></i></b>
-				</button>
-
-				<form class="dropdown-menu form-wrapper ">
-					<div class="form-group">
-						<p>
-							<b>Email</b>
-						</p>
-						<input type="email" class="form-control" id="email" required>
-					</div>
-					<div class="form-group">
-						<p>
-							<b>Password</b>
-						</p>
-						<input type="password" class="form-control" id="pswd" required>
-					</div>
-					<button type="submit" class="btn btn-danger full-width">Login</button>
-				</form>
-
-
-
-			</div> <a href="register.html" type="button"
-			class="btn btn-lg btn-primary green"
-			style="float: right; margin-right: 20px; margin-top: 50px"> <b>REGISTER</b>
-		</a>
+			<div style="color:white; margin-top: 40px">
+							<h4>Hello, &nbsp;<c:out value="${sessionScope.fname}" escapeXml="false"/>!</h4>
+							</div>
+			<c:import var ="afterloginCust" url="res/afterLoginCust.html"/>
+			<c:out value="${afterloginCust}" escapeXml="false"/>
+			</div> 
+			</c:when>
+			<c:when test="${sessionScope.type=='restaurant'}">
+			<div class="dropdown pull-right" style="display: inline">
+			<div style="color:white; margin-top: 40px">
+							<h4>Hello, &nbsp;<c:out value="${sessionScope.fname}" escapeXml="false"/>!</h4>
+							</div>
+			<c:import var ="afterloginRest" url="res/afterLoginRest.html"/>
+			<c:out value="${afterloginRest}" escapeXml="false"/>
+			</div> 
+			</c:when>
+			</c:choose>
+			</c:otherwise>
+			</c:choose>
 		</span>
 		
 			<br> <br> <br> <br> <br> <br> <br>

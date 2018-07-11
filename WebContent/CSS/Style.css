@@ -12,10 +12,11 @@ input[type="search"]::-webkit-search-cancel-button {
 	background-image: none;
 }
 
-.btn-primary.green:hover {
-	color: #63C9A7;
-	border-color: #63C9A7;
-	background-color: white;
+.btn-primary.green:hover  .dropdown-toggle:active, .open .dropdown-toggle{
+	color: #63C9A7 !important;
+	border-color: #63C9A7 !important;
+	background-color: white !important;
+	background-image: none;
 }
 
 .input-group-btn.input-space {
@@ -44,6 +45,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .dropdown-menu.form-wrapper {
+	width: 280px;
+	padding: 20px;
+	left: auto;
+	right: 0;
+	font-size: 14px;
+}
+.dropdown-menu.form-wrapper1 {
 	width: 280px;
 	padding: 20px;
 	left: auto;
