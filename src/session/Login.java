@@ -37,7 +37,7 @@ public class Login extends HttpServlet {
 			session.setAttribute("fname", getFirstName(email,db));
 			response.sendRedirect("index.jsp");
 		} else {
-			response.sendRedirect("Login.jsp");
+			response.sendRedirect("RegisterFailed.html");
 		}
 	}
 

@@ -30,10 +30,30 @@
 <div style="background-color:#FFCC00; padding:40px">
 <span> <a href="index.jsp"><img src="img/logo.png" height="100" width="200"></a>
 
-			<button type="button" class="btn btn-lg btn-primary orange"
-				style="float: right; margin-top:50px">
-				<b>LOGIN</b>
-			</button>
+			<div class="dropdown pull-right" style="display: inline">
+				<button type="button"
+					class="btn btn-lg btn-primary orange dropdown-toggle"
+					id="loginDropdown" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false" style="float: right; margin-top: 50px">
+					<b>LOGIN&nbsp;<i class="glyphicon glyphicon-triangle-bottom"></i></b>
+				</button>
+
+				<form action="Login" class="dropdown-menu form-wrapper " method="post">
+					<div class="form-group">
+						<p>
+							<b>Email</b>
+						</p>
+						<input type="email" class="form-control" name="email" required>
+					</div>
+					<div class="form-group">
+						<p>
+							<b>Password</b>
+						</p>
+						<input type="password" class="form-control" name="pswd" required>
+					</div>
+					<input type="submit" class="btn btn-danger full-width" value=Login>
+				</form>
+			</div>
 		</span>
 		</div>
 		<br>
@@ -57,10 +77,20 @@
 				<input type="email" class="form-control" name="email" required> </div>
 				<div class="form-group">
 				<p style="display: inline"><b>Password</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
-				<input type="password" class="form-control" name="pswd" required> </div>
+				<input type="password" class="form-control" name="pswd" id="pass" required> </div>
 				<div class="form-group">
 				<p style="display: inline"><b>Confirm Password</b></p> <p style="display: inline; float:right; color:grey"><b>Required</b></p>
-				<input type="password" class="form-control" name="cfmpswd" required> </div>
+				<input type="password" class="form-control" oninput="check(this)" name="cfmpswd" required> </div>
+				<script language='javascript' type='text/javascript'>
+				function check(input) {
+					if (input.value != document.getElementById('pass').value) {
+						input.setCustomValidity('Password Must be Matching.');
+					} else {
+
+						input.setCustomValidity('');
+					}
+				}
+			</script>
 				<div class="form-controls">
 				 <input type="submit" class="btn btn-danger btn-lg full-width" value="SIGN UP">
 				</div>
