@@ -89,11 +89,11 @@
 							style="background-color: rgba(255, 255, 255, 0.4); border-radius: 20px; border: 2px solid white; color: white">
 							<h1>A Better Way to Order Your Food</h1>
 							<br>
-							<form name="searchForm" action="search.html"
+							<form name="searchForm" action="Search"
 								onsubmit="return checkEmpty()">
 
 								<div class="input-group">
-									<input id="search" type="search" class="form-control input-lg"
+									<input name="search" type="search" class="form-control input-lg"
 										placeholder="Search your restaurant..."
 										style="border-radius: 8px"> <span
 										class="input-group-btn input-space">
