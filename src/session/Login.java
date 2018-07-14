@@ -35,6 +35,7 @@ public class Login extends HttpServlet {
 			session.setAttribute("email", email);
 			session.setAttribute("type", getAccountType(email, db));
 			session.setAttribute("fname", getFirstName(email,db));
+			session.setAttribute("id", getUserId(email,db));
 			response.sendRedirect("index.jsp");
 		} else {
 			response.sendRedirect("RegisterFailed.html");
@@ -119,5 +120,29 @@ public class Login extends HttpServlet {
 			System.out.println("Error creating table " + e);
 		}
 		return fname;
+	}
+	public String getUserId(String email, Connect conn) {
+		Statement st;
+		String id = null;
+		Connection connection = conn.getConnection();
+		try {
+			st = connection.createStatement();
+			rs = st.executeQuery("Select id from account where email='" + email + "'");
+		} catch (Exception e) {
+			System.out.println("Cant get account info");
+			e.printStackTrace();
+		}
+		try {
+			if (rs != null) {
+				while (rs.next()) {
+					id = rs.getString("id");
+
+				}
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Error creating table " + e);
+		}
+		return id;
 	}
 }

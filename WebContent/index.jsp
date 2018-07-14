@@ -64,6 +64,7 @@
 							</div>
 			<c:import var ="afterloginCust" url="res/afterLoginCust.html"/>
 			<c:out value="${afterloginCust}" escapeXml="false"/>
+			
 			</div> 
 			</c:when>
 			<c:when test="${sessionScope.type=='restaurant'}">
