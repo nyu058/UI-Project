@@ -49,7 +49,11 @@
 
 			<div class="dropdown pull-right" style="display: inline">
 				<div style="color: white; margin-top: 40px">
-					<h4>Hello, &nbsp;<c:out value="${sessionScope.fname}" escapeXml="false"/>!</h4>
+					<h4>
+						Hello, &nbsp;
+						<c:out value="${sessionScope.fname}" escapeXml="false" />
+						!
+					</h4>
 				</div>
 
 
@@ -63,7 +67,7 @@
 				<ul class="dropdown-menu ">
 
 					<li><a href="orderRest.jsp" class="dropdown-item">Orders</a></li>
-<li><a href="#" class="dropdown-item">My Menu</a></li>
+					<li><a href="#" class="dropdown-item">My Menu</a></li>
 					<form action="Logout" method="get">
 						<div class="col-xs-12">
 							<input type="submit" class="btn btn-danger full-width"
@@ -71,37 +75,39 @@
 						</div>
 					</form>
 				</ul>
-
-
 			</div>
 		</span>
-
 	</div>
+	<br>
 	<div class="container">
 		<div class="row">
 
 			<div
-				class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-				<h3>My Orders</h3>
+				class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+				<a class="btn btn-primary orange" href=orderRest.jsp><i
+					class="glyphicon glyphicon-chevron-left"></i>Back</a>
+				<h3>Order detail:</h3>
 				<table class="table">
-					<thead>
-						<tr>
-							<th>Table&num;</th>
-							<th>Date</th>
-							<th>Price</th>
-							<th>Status</th>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody>
-						<% out.print(orderObj.getRestaurantOrder(orderObj.getRestaurantID(session.getAttribute("id").toString(), db), db)); %>
 
-					</tbody>
+
+					<%=orderObj.getOrderDetail(request.getParameter("orderid"), db)%>
+					<%=orderObj.getOrderItems(request.getParameter("orderid"), db)%>
 				</table>
+				<span>
+					<h4 style="display: inline">Change Order Status:&nbsp;</h4>
+					<form action="Orders" method="post" style="display: inline">
+						<label class="radio-inline" style="color: red"><input
+							type="radio" name="status" value="0">Incomplete</label> <label
+							class="radio-inline" style="color: green"><input
+							type="radio" name="status" value="1" >Completed</label>
+							<input type="hidden" name="oid" value="${param.orderid}">&nbsp;
+						<button type="submit" class="btn btn-primary orange">
+							<i class="glyphicon glyphicon-ok"></i>&nbsp;Confirm
+						</button>
+					</form>
+				</span>
 			</div>
 		</div>
 	</div>
-
-
 </body>
 </html>
