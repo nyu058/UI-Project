@@ -101,7 +101,7 @@
 							class="radio-inline" style="color: green"><input
 							type="radio" name="status" value="1" >Completed</label>
 							<input type="hidden" name="oid" value="${param.orderid}">&nbsp;
-						<button type="submit" class="btn btn-primary orange">
+						<button type="submit" class="btn btn-primary green">
 							<i class="glyphicon glyphicon-ok"></i>&nbsp;Confirm
 						</button>
 					</form>
