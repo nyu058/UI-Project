@@ -83,23 +83,24 @@
 		</span>
 	</div>
 	<ul class="menunav">
+	
 		<li><a href="#Appetizers"><b>Appetizer</b></a></li>
 		<li><a href="#Main"><b>Main</b></a></li>
 		<li><a href="#dessert"><b>Dessert</b></a></li>
-
-		<button id="checkout" class="btn btn-primary green "
+<form action="orderSuccess.jsp">
+		<button type="submit" id="checkout" class="btn btn-primary green "
 			onclick=" down('0')"
-			style="float: right; margin-right: 20px; margin-left: 20px; margin-top: 10px; vertical-align: middle; justify-content: center">
+			style="float: right; margin-right: 20px; margin-left: 20px; margin-top:10px  ">
 			<i class="glyphicon glyphicon-ok"></i>&nbsp;Confirm Order
 		</button>
-
+</form>
 		<h3 style="float: right;">
 			Total: &nbsp;$ <span id="dish_sun">0.00</span>
 
 		</h3>
 		<input class="form-control"
-			style="display: inline; width: 50px; margin-right: 20px; margin-left: 10px; margin-top: 10px; float: right"
-			type="number" />
+			style="display: inline; width: 60px; margin-right: 20px; margin-left: 10px; margin-top: 10px; float: right"
+			type="number" min="1" required/>
 		<h3 style="float: right;">Table Number:</h3>
 	</ul>
 	<div class="container">

@@ -68,9 +68,9 @@ public class Orders extends HttpServlet {
 		try {
 			if (rs != null) {
 				while (rs.next()) {
-					orderList += " <td><h4>" + rs.getString("name")
+					orderList += "<tr> <td><h4>" + rs.getString("name")
 							+ "</h4></td><td><h4>" + rs.getString(3)+ "</h4></td><td><h4>$" + rs.getString(1)+"</h4></td>" + status(rs.getBoolean(2))
-							+ "</h4></td>";
+							+ "</h4></td></tr>";
 
 				}
 			}

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -30,7 +31,35 @@
 	<div style="background-color: #FFCC00; padding: 40px">
 		<span> <a href="index.jsp"><img src="img/logo.png"
 				height="100" width="200"></a>
+<div class="dropdown pull-right" style="display: inline">
+				<div style="color: white; margin-top: 40px">
+					<h4>
+						Hello, &nbsp;
+						<c:out value="${sessionScope.fname}" escapeXml="false" />
+						!
+					</h4>
+				</div>
 
+
+				<button type="button"
+					class="btn btn-lg btn-primary orange dropdown-toggle"
+					id="loginDropdown" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false" style="float: right">
+					<b>My Account&nbsp;<i
+						class="glyphicon glyphicon-triangle-bottom"></i></b>
+				</button>
+				<ul class="dropdown-menu ">
+
+					<li><a href="orderRest.jsp" class="dropdown-item">Orders</a></li>
+					<li><a href="#" class="dropdown-item">My Menu</a></li>
+					<form action="Logout" method="get">
+						<div class="col-xs-12">
+							<input type="submit" class="btn btn-danger full-width"
+								value="Logout" style="margin-top: 10px">
+						</div>
+					</form>
+				</ul>
+			</div>
 
 		</span>
 	</div>
@@ -41,7 +70,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-sm-push-2 text-center">
-				<h1>You have successfully registered.</h1>
+				<h1>Thank you, your food should arrive at you table shortly.</h1>
 				<a href="index.jsp"><h2>Return to Home Page</h2></a>
 			</div>
 		</div>
