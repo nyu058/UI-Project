@@ -137,6 +137,17 @@
 		</div>
 		</div>
 </div>
+<<<<<<< HEAD
+=======
+<div>
+				<button type="submit" class="btn btn-lg btn-primary green"
+											style="border-radius: 8px"> SUBMIT</button>
+			</div>
+			</div>
+		</div>
+		</div>
+
+>>>>>>> branch 'master' of https://github.com/nyu058/UI-Project
 
 </body>
 </html>
