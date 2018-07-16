@@ -27,7 +27,7 @@
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 <meta charset="ISO-8859-1">
-
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 <title>Food Avenue</title>
 <link rel="stylesheet" href="CSS/Style.css">
 </head>

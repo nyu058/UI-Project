@@ -30,6 +30,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script language="javascript" src="add+-.js"></script>
 <title>Menu</title>
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 <link rel="stylesheet" href="CSS/Style.css">
 <%
 	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");

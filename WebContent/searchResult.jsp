@@ -29,6 +29,7 @@
 	crossorigin="anonymous"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Search Result</title>
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 <link rel="stylesheet" href="CSS/Style.css">
 <%
 	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
