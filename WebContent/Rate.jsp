@@ -28,7 +28,7 @@
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Orders</title>
+<title>Rating</title>
 <link rel="stylesheet" href="CSS/Style.css">
 <%
 	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
@@ -83,24 +83,35 @@
 
 			<div
 				class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-				<h3>My Orders</h3>
+				<h3>Rate for Yummy Dinner
+				</h3>
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th>Restaurant</th>
-							<th>Date</th>
-							<th>Price</th>
-							<th>Status</th>
-							<th>Rate</th>
+							<th>Dish Name</th>
+							<th>Rating</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-						<% out.print(orderObj.getCustomerOrder(session.getAttribute("id").toString(), db)); %>
-							<td><a href="Rate.jsp">
-								<button type="submit" class="btn btn-sm btn-primary green"
-											style="border-radius: 8px"> RATE</button></a>
-							</td>
+					<tr>
+						<td>BLT Sandwich</td>
+							<td><a href="#" class="btn btn-info btn-sm">
+          								<span class="glyphicon glyphicon-thumbs-up"></span> Like
+        							</a>
+      							<a href="#" class="btn btn-info btn-sm">
+          								<span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+        							</a> 
+      						</td>
+      						</tr>
+      						<tr>
+							<td>Breakfast Special</td>
+							<td><a href="#" class="btn btn-info btn-sm">
+          								<span class="glyphicon glyphicon-thumbs-up"></span> Like
+        							</a>
+      							<a href="#" class="btn btn-info btn-sm">
+          								<span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+        							</a> 
+      						</td>      						
 						</tr>
 						
 					</tbody>
