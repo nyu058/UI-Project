@@ -91,11 +91,18 @@
 							<th>Date</th>
 							<th>Price</th>
 							<th>Status</th>
+							<th>Rate</th>
 						</tr>
 					</thead>
 					<tbody>
+						<tr>
 						<% out.print(orderObj.getCustomerOrder(session.getAttribute("id").toString(), db)); %>
-
+							<td>
+								<button type="submit" class="btn btn-sm btn-primary green"
+											style="border-radius: 8px"> RATE</button>
+							</td>
+						</tr>
+						
 					</tbody>
 				</table>
 			</div>
