@@ -70,7 +70,7 @@ public class Orders extends HttpServlet {
 				while (rs.next()) {
 					orderList += "<tr> <td><h4>" + rs.getString("name")
 							+ "</h4></td><td><h4>" + rs.getString(3)+ "</h4></td><td><h4>$" + rs.getString(1)+"</h4></td>" + status(rs.getBoolean(2))
-							+ "</h4></td></tr>";
+							+ "</h4></td><td><a href=\"Rate.jsp\"><button type=\"submit\" class=\"btn btn-sm btn-primary green\"style=\"border-radius: 8px\"> RATE</button></a></td></tr>";
 
 				}
 			}

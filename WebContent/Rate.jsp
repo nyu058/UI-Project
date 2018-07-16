@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="java.sql.*"%>
-<%@page import="connection.Connect"%>
-<%@page import="data.Orders"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,6 +9,7 @@
 	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	crossorigin="anonymous"></script>
 <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -36,11 +35,7 @@
 	response.setDateHeader("Expires", -1);
 %>
 </head>
-<%
-	Connect db = new Connect();
-	db.openConnection();
-	Orders orderObj = new Orders();
-%>
+
 <body>
 	<div style="background-color: #FFCC00; padding: 40px">
 		<span> <a href="index.jsp"><img src="img/logo.png"
@@ -83,8 +78,8 @@
 
 			<div
 				class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-				<h3>Rate for Yummy Dinner
-				</h3>
+				<h3>Rate Your Food:</h3>
+
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -95,31 +90,53 @@
 					<tbody>
 					<tr>
 						<td>BLT Sandwich</td>
-							<td><a href="#" class="btn btn-info btn-sm">
-          								<span class="glyphicon glyphicon-thumbs-up"></span> Like
-        							</a>
-      							<a href="#" class="btn btn-info btn-sm">
-          								<span class="glyphicon glyphicon-thumbs-down"></span> Unlike
-        							</a> 
+							<td><button type="button" class="btn btn-default btn-sm">
+          						<span class="glyphicon glyphicon-thumbs-up"></span> Like
+        					</button>
+      						<button type="button" class="btn btn-default btn-sm">
+          						<span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+        					</button>
       						</td>
       						</tr>
       						<tr>
 							<td>Breakfast Special</td>
-							<td><a href="#" class="btn btn-info btn-sm">
-          								<span class="glyphicon glyphicon-thumbs-up"></span> Like
-        							</a>
-      							<a href="#" class="btn btn-info btn-sm">
-          								<span class="glyphicon glyphicon-thumbs-down"></span> Unlike
-        							</a> 
+							<td><button type="button" class="btn btn-default btn-sm">
+          						<span class="glyphicon glyphicon-thumbs-up"></span> Like
+        					</button>
+      						<button type="button" class="btn btn-default btn-sm">
+          						<span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+        					</button>
       						</td>      						
 						</tr>
 						
 					</tbody>
 				</table>
-			</div>
+				<h3>Rate Yummy Dinner:</h3>
+				<center>
+				<div class="stars">
+				
+  <form action="">
+    <input class="star star-5" id="star-5" type="radio" name="star"/>
+    <label class="star star-5" for="star-5"></label>
+    <input class="star star-4" id="star-4" type="radio" name="star"/>
+    <label class="star star-4" for="star-4"></label>
+    <input class="star star-3" id="star-3" type="radio" name="star"/>
+    <label class="star star-3" for="star-3"></label>
+    <input class="star star-2" id="star-2" type="radio" name="star"/>
+    <label class="star star-2" for="star-2"></label>
+    <input class="star star-1" id="star-1" type="radio" name="star"/>
+    <label class="star star-1" for="star-1"></label>
+  </form>
+ 
+</div>	
+ </center><center>
+			<a href="rateSuccess.jsp" type="submit" class="btn btn-lg btn-primary green"
+											style="border-radius: 8px"><b> SUBMIT</b></a>
+											</center>
+			
 		</div>
-	</div>
-
+		</div>
+</div>
 
 </body>
 </html>

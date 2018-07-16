@@ -1,10 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@page import="java.sql.*"%>
-<%@page import="connection.Connect"%>
-<%@page import="data.Orders"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -27,30 +22,22 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Orders</title>
+<meta charset="ISO-8859-1">
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<title>Success!</title>
 <link rel="stylesheet" href="CSS/Style.css">
-<%
-	response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
-	response.setHeader("Pragma", "no-cache");
-	response.setDateHeader("Expires", -1);
-%>
 </head>
-<%
-	Connect db = new Connect();
-	db.openConnection();
-	Orders orderObj = new Orders();
-%>
 <body>
 	<div style="background-color: #FFCC00; padding: 40px">
 		<span> <a href="index.jsp"><img src="img/logo.png"
 				height="100" width="200"></a>
-
-
-			<div class="dropdown pull-right" style="display: inline">
+<div class="dropdown pull-right" style="display: inline">
 				<div style="color: white; margin-top: 40px">
-					<h4>Hello, &nbsp;<c:out value="${sessionScope.fname}" escapeXml="false"/>!</h4>
+					<h4>
+						Hello, &nbsp;
+						<c:out value="${sessionScope.fname}" escapeXml="false" />
+						!
+					</h4>
 				</div>
 
 
@@ -63,9 +50,8 @@
 				</button>
 				<ul class="dropdown-menu ">
 
-					<li><a href="#" class="dropdown-item">My Profile</a></li>
-					<li><a href="ordersCust.jsp" class="dropdown-item">Past
-							Orders</a></li>
+					<li><a href="orderRest.jsp" class="dropdown-item">Orders</a></li>
+					<li><a href="#" class="dropdown-item">My Menu</a></li>
 					<form action="Logout" method="get">
 						<div class="col-xs-12">
 							<input type="submit" class="btn btn-danger full-width"
@@ -73,40 +59,21 @@
 						</div>
 					</form>
 				</ul>
-
-
 			</div>
-		</span>
 
+		</span>
 	</div>
+
+	<br>
+	<br>
+	<br>
 	<div class="container">
 		<div class="row">
-
-			<div
-				class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-				<h3>My Orders</h3>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Restaurant</th>
-							<th>Date</th>
-							<th>Price</th>
-							<th>Status</th>
-							<th>Rate</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-						<% out.print(orderObj.getCustomerOrder(session.getAttribute("id").toString(), db)); %>
-							
-						
-						
-					</tbody>
-				</table>
+			<div class="col-xs-12 col-sm-8 col-sm-push-2 text-center">
+				<h1>Thank you for the valuable feedback!.</h1>
+				<a href="ordersCust.jsp"><h2>Back to my Orders</h2></a>
 			</div>
 		</div>
 	</div>
-
-
 </body>
 </html>
