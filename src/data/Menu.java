@@ -58,11 +58,11 @@ public class Menu extends HttpServlet {
 		try {
 			if (rs != null) {
 				while (rs.next()) {
-					result += "<tr><td><h4>" + rs.getString("name")
-							+ "</h4></td><td class=\"col-md-6\"><h5>" + rs.getString("description")
-							+ "</h5></td><td><p>4/5</p></td><td>$<p style=\"display: inline\" id=\"dp"+index+"\">"
+					result += "<tr><td class=\"col-xs-3\"><h4>" + rs.getString("name")
+							+ "</h4></td><td class=\"col-xs-5\"><h5>" + rs.getString("description")
+							+ "</h5></td><td class=\"col-xs-1\"><p>4/5</p></td><td class=\"col-xs-1\">$<p style=\"display: inline\" id=\"dp"+index+"\">"
 							+ rs.getString(4)
-							+ "</h4></td><td class=\"col-md-2\"><button id=\"down\" class=\"btn btn-default\" onclick=\" down('0','"
+							+ "</h4></td><td class=\"col-xs-2\"><button id=\"down\" class=\"btn btn-default\" onclick=\" down('0','"
 							+ index + "')\"style=\"display: inline\">-</button> <input type=\"text\" id=\"myNumber"
 							+ index
 							+ "\"class=\"form-control\" value=\"0\" style=\"display: inline; width:33px\" readonly/> <button id=\"up\" class=\"btn btn-default\" onclick=\"up('9','"
@@ -94,11 +94,11 @@ public class Menu extends HttpServlet {
 		try {
 			if (rs != null) {
 				while (rs.next()) {
-					result += "<tr><td><h4>" + rs.getString("name")
-							+ "</h4></td><td class=\"col-md-6\"><h5>" + rs.getString("description")
-							+ "</h5></td><td><p>4/5</p></td><td>$<p style=\"display: inline\" id=\"dp"+index+"\">"
+					result += "<tr><td class=\"col-xs-3\"><h4 >" + rs.getString("name")
+							+ "</h4></td><td class=\"col-xs-5\"><h5>" + rs.getString("description")
+							+ "</h5></td><td class=\"col-xs-1\"><p>4/5</p></td><td class=\"col-xs-1\">$<p style=\"display: inline\" id=\"dp"+index+"\">"
 							+ rs.getString(4)
-							+ "</h4></td><td class=\"col-md-2\"><button id=\"down\" class=\"btn btn-default\" onclick=\" down('0','"
+							+ "</h4></td><td class=\"col-xs-2\"><button id=\"down\" class=\"btn btn-default\" onclick=\" down('0','"
 							+ index + "')\"style=\"display: inline\">-</button> <input type=\"text\" id=\"myNumber"
 							+ index
 							+ "\"class=\"form-control\" value=\"0\" style=\"display: inline; width:33px\" readonly/> <button id=\"up\" class=\"btn btn-default\" onclick=\"up('9','"
@@ -130,11 +130,11 @@ public class Menu extends HttpServlet {
 		try {
 			if (rs != null) {
 				while (rs.next()) {
-					result += "<tr><td><h4>" + rs.getString("name")
-							+ "</h4></td><td class=\"col-md-6\"><h5>" + rs.getString("description")
-							+ "</h5></td><td><p>4/5</p></td><td>$<p style=\"display: inline\" id=\"dp"+index+"\">"
+					result += "<tr><td class=\"col-xs-3\"><h4>" + rs.getString("name")
+							+ "</h4></td><td class=\"col-xs-5\"><h5>" + rs.getString("description")
+							+ "</h5></td><td class=\"col-xs-1\"><p>4/5</p></td><td class=\"col-xs-1\">$<p style=\"display: inline\" id=\"dp"+index+"\">"
 							+ rs.getString(4)
-							+ "</h4></td><td class=\"col-md-2\"><button id=\"down\" class=\"btn btn-default\" onclick=\" down('0','"
+							+ "</h4></td><td class=\"col-xs-2\"><button id=\"down\" class=\"btn btn-default\" onclick=\" down('0','"
 							+ index + "')\"style=\"display: inline\">-</button> <input type=\"text\" id=\"myNumber"
 							+ index
 							+ "\"class=\"form-control\" value=\"0\" style=\"display: inline; width:33px\" readonly/> <button id=\"up\" class=\"btn btn-default\" onclick=\"up('9','"

@@ -37,6 +37,9 @@
 	%>
 </head>
 <%
+if (session.getAttribute("email") == null) {
+	response.sendRedirect("index.jsp");
+}
 	Connect db = new Connect();
 	db.openConnection();
 	Search searchObj= new Search();
@@ -45,7 +48,32 @@
 <div style="background-color: #FFCC00; padding: 40px">
 		<span> <a href="index.jsp"><img src="img/logo.png"
 				height="100" width="200"></a>
+<div class="dropdown pull-right" style="display: inline">
+				<div style="color: white; margin-top: 40px">
+					<h4>Hello, &nbsp;<c:out value="${sessionScope.fname}" escapeXml="false"/>!</h4>
+				</div>
 
+
+				<button type="button"
+					class="btn btn-lg btn-primary orange dropdown-toggle"
+					id="loginDropdown" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false" style="float: right">
+					<b>My Account&nbsp;<i
+						class="glyphicon glyphicon-triangle-bottom"></i></b>
+				</button>
+				<ul class="dropdown-menu ">
+
+					<li><a href="#" class="dropdown-item">My Profile</a></li>
+					<li><a href="ordersCust.jsp" class="dropdown-item">Past
+							Orders</a></li>
+					<form action="Logout" method="get">
+						<div class="col-xs-12">
+							<input type="submit" class="btn btn-danger full-width"
+								value="Logout" style="margin-top: 10px">
+						</div>
+					</form>
+				</ul>
+			</div>
 
 		</span>
 	</div>

@@ -70,30 +70,32 @@ input[type="search"]::-webkit-search-cancel-button {
     z-index: 0 ;
     overflow: visible
 }
-ul {
+.menunav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #ff0000;
+    background-color: #FF6600;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
     display: block;
+    z-index:9
 }
 
-li {
+.menunav li {
     float: left;
 }
 
-li a {
+.menunav a{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px;
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: #111;
+.menunav a:hover {
+    background-color: #ff0000;
+    background-image: none;
 }
