@@ -1,0 +1,11 @@
+<script>
+	function checkEmpty() {
+		var input = document.forms["searchForm"]["search"].value;
+		if (input == "") {
+			alert('Search field cannot be empty!');
+			return false;
+		} else {
+			return true;
+		}
+	}
+</script>

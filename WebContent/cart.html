@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Search Result</title>
+<link rel="stylesheet" href="CSS/Style.css">
+</head>
+
+<body>
+	<div style="background-color: #FFCC00; padding: 40px">
+		<span> <a href="index.jsp"><img src="img/logo.png"
+				height="100" width="200"></a>
+		</span>
+	</div>
+	<ul>
+  		<li><a href="#Appetizers">Appetizers</a></li>
+  		<li><a href="#Main">Main</a></li>
+ 		<li><a href="#contact">Contact</a></li>
+ 		<button id="checkout" class="btn btn-default" onclick=" down('0')"
+			style="display: inline; float: right;">checkout</button> 
+		<h3 style="float: right;">Total: &nbsp;$ <span id="dish_sun">0.00</span></h3>
+		</p>
+	</ul>
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" >
+	<div id="Appetizers">
+	<h1>Appetizers</h1>
+	<table class="table">
+	<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+				$
+		    <p id="dp1" style="display: inline">3.89</p>
+		<button id="down" class="btn btn-default" onclick="down('0','1')"
+			style="display: inline">-</button> 
+		<input type="text" id="myNumber1" class="form-control" value="0" style="display: inline; width:33px" />
+		<button id="up" class="btn btn-default" onclick="up('9','1')"
+			style="display: inline">+</button>
+	</span>
+	<br>
+	<span>	
+	
+			<p style="display: inline;font-size:20px">Chinese Hamburger</p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">Pork and bread</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp2" style="display: inline;">3.99</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','2')"
+			style="display: inline">-</button> 
+			<input type="text" id="myNumber2"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','2')"
+			style="display: inline">+</button>
+	</span>
+	<span>	
+	
+			<p style=" font-size:20px">Spring Roll</p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp3">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','3')"
+			style="display: inline">-</button> <input type="text" id="myNumber3"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','3')"
+			style="display: inline">+</button>
+	</span>
+	<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$		
+		<p id="dp4">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','4')"
+			style="display: inline">-</button> <input type="text" id="myNumber4"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','4')"
+			style="display: inline">+</button>
+	</span>
+	<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp5">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','5')"
+			style="display: inline">-</button> <input type="text" id="myNumber5"
+		class="form-control" value="0" style="display: inline; width:33px" readonly/>
+
+		<button id="up" class="btn btn-default" onclick="up('9','5')"
+			style="display: inline">+</button>
+	</span>
+	<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp6">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','6')"
+			style="display: inline">-</button> <input type="text" id="myNumber6"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','6')"
+			style="display: inline">+</button>
+	</span>
+		<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp6">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','6')"
+			style="display: inline">-</button> <input type="text" id="myNumber6"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','6')"
+			style="display: inline">+</button>
+	</span>
+		<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp6">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','6')"
+			style="display: inline">-</button> <input type="text" id="myNumber6"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','6')"
+			style="display: inline">+</button>
+	</tr>
+		<tr>	
+	<td>
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+		</td><td>				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			</td><td>
+			$	
+		<p style="display: inline" id="dp6">3.89</p></td><td>
+		<button id="down" class="btn btn-default" onclick=" down('0','6')"
+			style="display: inline">-</button> <input type="text" id="myNumber6"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','6')"
+			style="display: inline">+</button>
+	</td></tr>
+	</table>
+	</div>
+	<div id="Main">
+	<h1>Main</h1>
+	<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp6">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','6')"
+			style="display: inline">-</button> <input type="text" id="myNumber6"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','6')"
+			style="display: inline">+</button>
+	</span>
+	<span>	
+	
+			<p style="display: inline; font-size:20px">Steam Sweet Custard Bun </p>
+			&thinsp;
+			&thinsp;
+			&thinsp;				
+			<p style="display: inline; font-size:12px">sweet bun</p>	
+			&thinsp;
+			&thinsp;
+			&thinsp;
+			$	
+		<p id="dp6">3.89</p>
+		<button id="down" class="btn btn-default" onclick=" down('0','6')"
+			style="display: inline">-</button> <input type="text" id="myNumber6"
+		class="form-control" value="0" style="display: inline; width:33px" />
+
+		<button id="up" class="btn btn-default" onclick="up('9','6')"
+			style="display: inline">+</button>
+	</span>
+	
+	
+	</div>
+	
+	
+	</div>
+	</div>
+</div>
+	
+	
+	
+
+
+	<script src="add+-.js"></script>
+</body>
+
+
+</html>
