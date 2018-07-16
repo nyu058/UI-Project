@@ -131,8 +131,10 @@
     <label class="star star-1" for="star-1"></label>
   </form>
 </div>
-				<button type="submit" class="btn btn-sm btn-primary green"
+<div>
+				<button type="submit" class="btn btn-lg btn-primary green"
 											style="border-radius: 8px"> SUBMIT</button>
+			</div>
 			</div>
 		</div>
 		</div>
