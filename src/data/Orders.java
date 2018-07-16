@@ -51,6 +51,7 @@ public class Orders extends HttpServlet {
 		response.sendRedirect("orderDetail.jsp?orderid="+oid);
 		
 	}
+	
 
 	public String getCustomerOrder(String id, Connect conn) {
 		String orderList=null;
@@ -67,9 +68,9 @@ public class Orders extends HttpServlet {
 		try {
 			if (rs != null) {
 				while (rs.next()) {
-					orderList += "<tr> <td><h4>" + rs.getString("name")
+					orderList += " <td><h4>" + rs.getString("name")
 							+ "</h4></td><td><h4>" + rs.getString(3)+ "</h4></td><td><h4>$" + rs.getString(1)+"</h4></td>" + status(rs.getBoolean(2))
-							+ "</h4></td></tr>";
+							+ "</h4></td>";
 
 				}
 			}
@@ -113,6 +114,7 @@ public class Orders extends HttpServlet {
 		
 		return orderList;
 	}
+	
 	public String getRestaurantID(String oid, Connect conn) {
 		String rid = null;
 		Statement st;
@@ -136,6 +138,35 @@ public class Orders extends HttpServlet {
 		
 		return rid;
 	}
+
+	/**
+	 * @param restaurant_id
+	 * @return restaurant_name
+	 */
+	public String getRestaurantName(String restaurant_id, Connect conn) {
+		String restaurant_name = null;
+		Statement st;
+		Connection connection = conn.getConnection();
+		try {
+			st = connection.createStatement();
+			rs = st.executeQuery("select name from restaurant  where restaurant.id=" + restaurant_id);
+		} catch (Exception e) {
+			System.out.println("Cant get restaurant name");
+		}
+		try {
+			if (rs != null) {
+				while (rs.next()) {
+					restaurant_name = rs.getString("name");
+				}
+			}
+
+		} catch (Exception e) {
+			System.out.println("Error creating table " + e);
+		}
+		
+		return restaurant_name;
+	}
+	
 public String getOrderDetail(String id, Connect db) {
 	String result=null;
 	Statement st;
