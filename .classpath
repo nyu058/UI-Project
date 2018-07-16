@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
@@ -14,3 +15,23 @@
 
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
+=======
+@@ -1,15 +1,15 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <classpath>
+ 	<classpathentry kind="src" path="src"/>
+ 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+ 		<attributes>
+ 			<attribute name="module" value="true"/>
+ 			<attribute name="owner.project.facets" value="java"/>
+ 		</attributes>
+ 	</classpathentry>
+ 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+ 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+-	<classpathentry exported="true" kind="lib" path="/2132Project/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar"/>
+-	<classpathentry kind="lib" path="C:/Users/Nathan/Downloads/postgresql-42.2.2.jar"/>
++	<classpathentry kind="lib" path="F:/2132Project/2132Project/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar"/>
++	<classpathentry kind="lib" path="C:/Users/natha/Downloads/postgresql-42.2.2.jar"/>
+ 	<classpathentry kind="output" path="build/classes"/>
+ </classpath>
+>>>>>>> branch 'master' of https://github.com/nyu058/UI-Project
