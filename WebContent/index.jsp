@@ -27,17 +27,7 @@
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 <meta charset="ISO-8859-1">
-<script>
-	function checkEmpty() {
-		var input = document.forms["searchForm"]["search"].value;
-		if (input == "") {
-			alert('Search field cannot be empty!');
-			return false;
-		} else {
-			return true;
-		}
-	}
-</script>
+
 <title>Food Avenue</title>
 <link rel="stylesheet" href="CSS/Style.css">
 </head>
@@ -91,7 +81,7 @@
 							<h1>A Better Way to Order Your Food</h1>
 							<br>
 							<form name="searchForm" action="Search"
-								onsubmit="return checkEmpty()">
+								>
 
 								<div class="input-group">
 									<input name="search" type="search" class="form-control input-lg"
