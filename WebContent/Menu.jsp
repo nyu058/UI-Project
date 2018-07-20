@@ -100,7 +100,7 @@
 		</h3>
 		<input class="form-control"
 			style="display: inline; width: 60px; margin-right: 20px; margin-left: 10px; margin-top: 10px; float: right"
-			type="number" min="1" required/>
+			type="number" min="1" value="1" required/>
 		<h3 style="float: right;">Table Number:</h3>
 	</ul>
 	<div class="container">

@@ -33,11 +33,7 @@
 				height="100" width="200"></a>
 <div class="dropdown pull-right" style="display: inline">
 				<div style="color: white; margin-top: 40px">
-					<h4>
-						Hello, &nbsp;
-						<c:out value="${sessionScope.fname}" escapeXml="false" />
-						!
-					</h4>
+					<h4>Hello, &nbsp;<c:out value="${sessionScope.fname}" escapeXml="false"/>!</h4>
 				</div>
 
 
@@ -50,8 +46,9 @@
 				</button>
 				<ul class="dropdown-menu ">
 
-					<li><a href="orderRest.jsp" class="dropdown-item">Orders</a></li>
-					<li><a href="#" class="dropdown-item">My Menu</a></li>
+					<li><a href="#" class="dropdown-item">My Profile</a></li>
+					<li><a href="ordersCust.jsp" class="dropdown-item">Past
+							Orders</a></li>
 					<form action="Logout" method="get">
 						<div class="col-xs-12">
 							<input type="submit" class="btn btn-danger full-width"
@@ -59,6 +56,8 @@
 						</div>
 					</form>
 				</ul>
+
+
 			</div>
 
 		</span>
